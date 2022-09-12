@@ -1,11 +1,14 @@
-public class Employee {
+public class Employee{
     private String name;
 
     public Employee(String name){
-        name = name;
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 }
+
+
+
