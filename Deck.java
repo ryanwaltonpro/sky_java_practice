@@ -6,7 +6,7 @@ public class Deck {
     public static void main(String[] args ){
         Deck d = new Deck();
         d.printCards();
-        d.printNumbers(1,2,1,4,12);
+        d.printNumbersAndString("hello",2,1,4,12);
     }
     List<PlayingCard> cards = new ArrayList<>();
 
@@ -24,8 +24,12 @@ public class Deck {
     public void printCards(){
         for(PlayingCard card : cards){
             System.out.println(card.getSuit() +  " " + card.getRank());
-
         }
+    }
+
+    public void printNumbersAndString(String title, int...numbers){
+        System.out.println(title);
+        printNumbers(numbers);
     }
     public void printNumbers(int... numbers){
         System.out.println();
@@ -36,5 +40,6 @@ public class Deck {
             System.out.print(number + " ");
         }
     }
+
 
 }
