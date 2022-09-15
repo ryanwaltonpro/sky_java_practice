@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
+
     public static void main(String[] args ){
         Deck d = new Deck();
         d.printCards();
+        d.printNumbers(1,2,1,4,12);
     }
     List<PlayingCard> cards = new ArrayList<>();
 
@@ -25,7 +27,14 @@ public class Deck {
 
         }
     }
+    public void printNumbers(int... numbers){
+        System.out.println();
 
-
+        System.out.println("===varargs===");
+        System.out.println(numbers.length + " arguments");
+        for(int number: numbers){
+            System.out.print(number + " ");
+        }
+    }
 
 }
